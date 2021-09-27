@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>REGISTRO DE EMPLEADOS</title>
+	<link rel="StyleSheet" href="PROPUESTO_DISEÑO.CSS" type"text/css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript">
+function suma()
+{
+    let costo_normal, horas_trabajadas, salario;
+    costo_normal = parseFloat (document.formulario1.costo_normal.value);
+    horas_trabajadas = parseFloat (document.formulario1.horas_trabajadas.value);
+    salario=horas_trabajadas*costo_normal;
+    document.formulario1.salario.value = salario;
+}
+</script>
+
+<script type="text/javascript">
+funcion puestoTrabajo()
+{
+var select = document.getElementById("selectbox");
+alert(select.options[select.selectedIndex].value)
+}
+</script>
+
+    <link rel="stylesheet" href="diseño.css">	
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+		    <tr>
+<td>
+                            <label>--------------------------------------------------------------------------------------</label>
+                        </td>
+</tr>
+                        <td>
+                            <label>REGISTRO DE EMPLEADOS Y PAGO MENSUAL</label>
+                        </td>
+<td colspan="2" rowspan="1">
+<tr align="center">
+		</tr>
+<td>
+                            <label>--------------------------------------------------------------------------------------</label>
+                        </td>
+		</tr>
+			<td>
+                            <label for="nombre_empleado">NOMBRE DEL EMPLEADO :</label>
+                        </td>
+                        <td>
+                            <input name="nombre_empleado" type="string" />
+                        </td>
+                    </tr>
+		   <tr>
+                        <td>
+                            <label for="puesto_trabajo">SELECCIONE EL PUESTO DE TRABAJO EN EL QUE LABORA:</label>
+                        </td>
+                        <td>
+                            <select id="selectbox">
+				<option value="Gerente"> Administrador</option>
+				<option value="Contador"> Ejecutivo</option>
+				<option value="Analista"> Gerente</option>
+				<option value="Analista"> Contador</option>
+				<option value="Personal de Limpieza"> Personal de Limpieza</option>
+				
+			     </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="costo_normal">VALOR DE LA HORA TRABAJADA:</label>
+                        </td>
+                        <td>
+                            <input name="costo_normal" required="required" step="0.1" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="horas_trabajadas">TOTAL DE HORAS TRABAJADAS:</label>
+                        </td>
+                        <td>
+                            <input name="horas_trabajadas" required="required" step="0.1" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Calcular" type="button" onclick="suma();" />
+                            <input type="reset" />
+                        </td>
+                    </tr>
+</tr>
+<td>
+                            <label>--------------------------------------------------------------------------------------</label>
+                        </td>
+		</tr>
+                    <tr>
+                        <td>
+                            <label for="salario">SU PAGO MENSUAL ES DE S/. </label>
+                        </td>
+                        <td>
+                            <input name="salario" step="0.1" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
